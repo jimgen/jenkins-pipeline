@@ -201,3 +201,11 @@ For ``Sonarqube`` we have made the following definitions in the ``pom.xml`` file
 ```
 
 In the docker compose file, we gave the name of the Sonarqube service which is ``sonarqube``, this is why in the ``pom.xml`` file, the sonar URL was defined as http://sonarqube:9000.
+
+
+
+
+
+docker build -t jenkins-plus .
+
+docker run -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):$(which docker) jenkins-plus
